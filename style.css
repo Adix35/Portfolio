@@ -1,0 +1,164 @@
+html {
+  width: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
+
+.project {
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project img {
+  max-width: 100%;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.project-image {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.project-description {
+  flex: 1;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.project.left {
+  flex-direction: row-reverse;
+}
+
+.project.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .project-description {
+    margin-left: 100px;
+  }
+}
+
+#contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.map,
+.address {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate.map.visible,
+.animate.address.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.map {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.address {
+  text-align: center;
+}
+
+.address p {
+  margin: 5px 0;
+}
+
+.transparent-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.8);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.transparent-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.transparent-menu ul li {
+  margin: 0 10px;
+}
+
+.transparent-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.transparent-menu ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
